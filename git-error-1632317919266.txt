@@ -1,0 +1,3 @@
+> git push origin main:main
+fatal: 已取消一个任务。
+fatal: unable to access 'https://github.com/NWUCM/rzy.git/': OpenSSL SSL_read: Connection was reset, errno 10054
