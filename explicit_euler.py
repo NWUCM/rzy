@@ -1,10 +1,14 @@
-import math 
+def f(t,u):
+    return 4*t*u**0.5
 h=0.1
-yn=1.0
-tn=2.0
-def f(t,y):
-    return (t**3*y) 
-for i in range(10):
-    yn1=yn+h*f(tn,yn)
-    tn=tn+h
-    print(yn1)
+t0=0
+u0=1
+step=10
+def explicit_euler(f,h,t0,u0,step=10):
+    us=[u0]
+    for i in range (step):
+        us.append(u0+h*f(t0,u0))
+        t0=t0+h
+    return us
+us=explicit_euler(f,h,t0,u0,step)
+print(us)
